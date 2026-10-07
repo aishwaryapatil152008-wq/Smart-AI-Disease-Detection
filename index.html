@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart AI Crop Health</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- ==================================================
+         LANDING PAGE
+    ================================================== -->
+
+    <section id="landing" class="page landing-page active">
+
+        <div class="landing-logo">
+            <div class="logo-circle">
+                🌱
+            </div>
+
+            <span>Smart AI</span>
+        </div>
+
+
+        <div class="hero">
+
+            <div class="hero-leaf">
+                🌿
+            </div>
+
+            <p class="small-title">
+                AI-POWERED CROP HEALTH
+            </p>
+
+            <h1>
+                Protect your crops.<br>
+                <span>Grow better.</span>
+            </h1>
+
+            <p class="hero-description">
+                Detect crop diseases early using AI-powered
+                leaf analysis and get simple recommendations
+                for healthier crops.
+            </p>
+
+            <button class="primary-btn"
+                    onclick="openLogin()">
+
+                Get Started
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+            <button class="secondary-btn"
+                    onclick="openLogin()">
+
+                <i class="fa-solid fa-right-to-bracket"></i>
+
+                Login
+
+            </button>
+
+        </div>
+
+
+        <!-- Features -->
+
+        <div class="landing-features">
+
+            <div>
+                <div class="feature-icon">📷</div>
+                <strong>AI Scan</strong>
+                <small>Scan leaves</small>
+            </div>
+
+            <div>
+                <div class="feature-icon">🌾</div>
+                <strong>Crop Health</strong>
+                <small>Track crops</small>
+            </div>
+
+            <div>
+                <div class="feature-icon">🤖</div>
+                <strong>AI Assistant</strong>
+                <small>Get guidance</small>
+            </div>
+
+        </div>
+
+
+        <p class="landing-footer">
+            Simple • Smart • Farmer Friendly
+        </p>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         LOGIN PAGE
+    ================================================== -->
+
+    <section id="login" class="page login-page">
+
+        <button class="back-button"
+                onclick="showPage('landing')">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+
+        <div class="login-logo">
+
+            <div class="logo-circle">
+                🌱
+            </div>
+
+            <h1>Welcome back</h1>
+
+            <p>
+                Login to continue protecting your crops.
+            </p>
+
+        </div>
+
+
+        <form id="loginForm"
+              class="login-form">
+
+            <label>
+                Email
+            </label>
+
+            <div class="input-box">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <label>
+                Password
+            </label>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="button"
+                        onclick="togglePassword()"
+                        class="eye-button">
+
+                    <i id="eyeIcon"
+                       class="fa-regular fa-eye"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="login-options">
+
+                <label class="remember">
+
+                    <input type="checkbox">
+
+                    Remember me
+
+                </label>
+
+                <button type="button"
+                        onclick="forgotPassword()">
+
+                    Forgot password?
+
+                </button>
+
+            </div>
+
+
+            <button type="submit"
+                    class="primary-btn login-btn">
+
+                Login
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+
+        <div class="demo-login">
+
+            <strong>Demo Login</strong>
+
+            <p>
+                Email: farmer@gmail.com
+            </p>
+
+            <p>
+                Password: 123456
+            </p>
+
+        </div>
+
+
+        <p class="signup-text">
+
+            Don't have an account?
+
+            <button onclick="showSignup()">
+                Create account
+            </button>
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         SIGN UP PAGE
+    ================================================== -->
+
+    <section id="signup" class="page login-page">
+
+        <button class="back-button"
+                onclick="showPage('login')">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+
+        <div class="login-logo">
+
+            <div class="logo-circle">
+                🌱
+            </div>
+
+            <h1>Create account</h1>
+
+            <p>
+                Start monitoring your crop health.
+            </p>
+
+        </div>
+
+
+        <form id="signupForm"
+              class="login-form">
+
+            <label>
+                Full Name
+            </label>
+
+            <div class="input-box">
+
+                <i class="fa-regular fa-user"></i>
+
+                <input
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <label>
+                Email
+            </label>
+
+            <div class="input-box">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <label>
+                Password
+            </label>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    placeholder="Create password"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit"
+                    class="primary-btn login-btn">
+
+                Create Account
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         HOME PAGE
+    ================================================== -->
+
+    <section id="home" class="page">
+
+        <div class="top-area">
+
+            <p class="greeting">
+                Good morning 👋
+            </p>
+
+            <h1>
+                Check your crop health
+            </h1>
+
+            <p class="location">
+                Anvi Raut · Nashik, Maharashtra
+            </p>
+
+        </div>
+
+
+        <div class="scan-banner">
+
+            <h2>
+                Scan a leaf now
+            </h2>
+
+            <p>
+                Point your camera at an affected leaf
+                for the best result.
+            </p>
+
+
+            <div class="banner-buttons">
+
+                <button onclick="openScan()"
+                        class="light-btn">
+
+                    <i class="fa-solid fa-expand"></i>
+
+                    Scan Leaf
+
+                </button>
+
+
+                <button onclick="openUpload()"
+                        class="outline-btn">
+
+                    <i class="fa-solid fa-upload"></i>
+
+                    Upload Image
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <strong id="totalScans">
+                    5
+                </strong>
+
+                <span>
+                    Total scans
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong class="green">
+                    2
+                </strong>
+
+                <span>
+                    Healthy
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong class="red">
+                    3
+                </strong>
+
+                <span>
+                    Diseases
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Quick actions -->
+
+        <div class="quick-actions">
+
+            <button onclick="openScan()">
+
+                <i class="fa-solid fa-expand"></i>
+
+                <span>Scan</span>
+
+            </button>
+
+
+            <button onclick="openHistory()">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <span>History</span>
+
+            </button>
+
+
+            <button onclick="openAssistant()">
+
+                <i class="fa-regular fa-comment"></i>
+
+                <span>Assistant</span>
+
+            </button>
+
+
+            <button onclick="openProfile()">
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>Profile</span>
+
+            </button>
+
+        </div>
+
+
+        <div class="section-title">
+
+            <h2>
+                Recent scans
+            </h2>
+
+            <button onclick="openHistory()">
+                View all
+            </button>
+
+        </div>
+
+
+        <div class="scan-list">
+
+            <div class="recent-card">
+
+                <div class="leaf-icon">
+                    🌿
+                </div>
+
+                <div class="scan-info">
+
+                    <strong>
+                        Tomato Early Blight
+                    </strong>
+
+                    <small>
+                        Tomato · 9/10/2026
+                    </small>
+
+                </div>
+
+                <span class="confidence">
+                    94% →
+                </span>
+
+            </div>
+
+
+            <div class="recent-card">
+
+                <div class="leaf-icon">
+                    🌿
+                </div>
+
+                <div class="scan-info">
+
+                    <strong>
+                        Potato Early Blight
+                    </strong>
+
+                    <small>
+                        Potato · 9/8/2026
+                    </small>
+
+                </div>
+
+                <span class="confidence">
+                    89% →
+                </span>
+
+            </div>
+
+
+            <div class="recent-card">
+
+                <div class="leaf-icon">
+                    🌿
+                </div>
+
+                <div class="scan-info">
+
+                    <strong>
+                        Healthy Leaf
+                    </strong>
+
+                    <small>
+                        Rice · 9/6/2026
+                    </small>
+
+                </div>
+
+                <span class="confidence">
+                    96% →
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="overview">
+
+            Crop health overview
+
+            <span>→</span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         SCAN PAGE
+    ================================================== -->
+
+    <section id="scan" class="page">
+
+        <div class="page-heading">
+
+            <h1>
+                Identify Crop Disease
+            </h1>
+
+            <p>
+                Use a clear, close-up photo of a single
+                affected leaf in daylight.
+            </p>
+
+        </div>
+
+
+        <div class="scan-options">
+
+            <button class="upload-box"
+                    onclick="takePhoto()">
+
+                <div class="big-icon">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+
+                <h2>
+                    Take a Photo
+                </h2>
+
+                <p>
+                    Use your phone camera
+                </p>
+
+            </button>
+
+
+            <button class="upload-box"
+                    onclick="openUpload()">
+
+                <div class="big-icon">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </div>
+
+                <h2>
+                    Upload Leaf Image
+                </h2>
+
+                <p>
+                    Choose from your gallery
+                </p>
+
+            </button>
+
+        </div>
+
+
+        <div id="previewContainer"
+             class="preview-container hidden">
+
+            <img id="previewImage"
+                 src=""
+                 alt="Leaf preview">
+
+            <button onclick="removeImage()"
+                    class="remove-image">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <h3 class="select-title">
+            Select crop
+        </h3>
+
+
+        <div class="crop-buttons">
+
+            <button class="crop selected"
+                    onclick="selectCrop(this)">
+                🍅 Tomato
+            </button>
+
+            <button class="crop"
+                    onclick="selectCrop(this)">
+                🥔 Potato
+            </button>
+
+            <button class="crop"
+                    onclick="selectCrop(this)">
+                🌾 Rice
+            </button>
+
+            <button class="crop"
+                    onclick="selectCrop(this)">
+                🌽 Maize
+            </button>
+
+            <button class="crop"
+                    onclick="selectCrop(this)">
+                🧵 Cotton
+            </button>
+
+        </div>
+
+
+        <button onclick="analyzeLeaf()"
+                class="analyze-btn">
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            Analyze with AI
+
+        </button>
+
+
+        <p class="ai-note">
+            ⓘ AI-powered preliminary assessment
+        </p>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         HISTORY
+    ================================================== -->
+
+    <section id="history" class="page">
+
+        <div class="page-heading">
+
+            <h1>
+                History
+            </h1>
+
+            <p>
+                5 scans · tap a card to open the full result
+            </p>
+
+        </div>
+
+
+        <div class="history-list">
+
+            <div class="history-card"
+                 onclick="showResult(
+                 'Tomato Early Blight',
+                 'Tomato',
+                 '94%',
+                 'Diseased')">
+
+                <div class="leaf-icon">
+                    🌿
+                </div>
+
+                <div class="history-info">
+
+                    <strong>
+                        Tomato Early Blight
+                    </strong>
+
+                    <span class="disease">
+                        Diseased
+                    </span>
+
+                    <small>
+                        Tomato · 9/10/2026 · 94% confidence
+                    </small>
+
+                </div>
+
+                <span>›</span>
+
+            </div>
+
+
+            <div class="history-card"
+                 onclick="showResult(
+                 'Potato Early Blight',
+                 'Potato',
+                 '89%',
+                 'Diseased')">
+
+                <div class="leaf-icon">
+                    🌿
+                </div>
+
+                <div class="history-info">
+
+                    <strong>
+                        Potato Early Blight
+                    </strong>
+
+                    <span class="disease">
+                        Diseased
+                    </span>
+
+                    <small>
+                        Potato · 9/8/2026 · 89% confidence
+                    </small>
+
+                </div>
+
+                <span>›</span>
+
+            </div>
+
+
+            <div class="history-card"
+                 onclick="showResult(
+                 'Healthy Leaf',
+                 'Rice',
+                 '96%',
+                 'Healthy')">
+
+                <div class="leaf-icon">
+                    🌿
+                </div>
+
+                <div class="history-info">
+
+                    <strong>
+                        Healthy Leaf
+                    </strong>
+
+                    <span class="healthy">
+                        Healthy
+                    </span>
+
+                    <small>
+                        Rice · 9/6/2026 · 96% confidence
+                    </small>
+
+                </div>
+
+                <span>›</span>
+
+            </div>
+
+
+            <div class="history-card">
+
+                <div class="leaf-icon">
+                    🌿
+                </div>
+
+                <div class="history-info">
+
+                    <strong>
+                        Tomato Late Blight
+                    </strong>
+
+                    <span class="disease">
+                        Diseased
+                    </span>
+
+                    <small>
+                        Tomato · 9/3/2026 · 91% confidence
+                    </small>
+
+                </div>
+
+                <span>›</span>
+
+            </div>
+
+
+            <div class="history-card">
+
+                <div class="leaf-icon">
+                    🌿
+                </div>
+
+                <div class="history-info">
+
+                    <strong>
+                        Healthy Leaf
+                    </strong>
+
+                    <span class="healthy">
+                        Healthy
+                    </span>
+
+                    <small>
+                        Maize · 8/30/2026 · 96% confidence
+                    </small>
+
+                </div>
+
+                <span>›</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         AI ASSISTANT
+    ================================================== -->
+
+    <section id="assistant"
+             class="page assistant-page">
+
+        <div class="page-heading">
+
+            <h1>
+                AI Assistant
+            </h1>
+
+            <p>
+                Text or voice — answers in simple language.
+            </p>
+
+        </div>
+
+
+        <div class="chat">
+
+            <div class="bot-message">
+
+                🌱
+
+                <div>
+
+                    Namaste 🌱 Ask me anything about
+                    your crop, or upload a leaf photo
+                    for an assessment.
+
+                </div>
+
+            </div>
+
+
+            <div id="chatMessages"></div>
+
+        </div>
+
+
+        <div class="suggestions">
+
+            <button onclick="askQuestion(
+                'My tomato leaves have yellow spots.')">
+
+                My tomato leaves have yellow spots
+
+            </button>
+
+
+            <button onclick="askQuestion(
+                'How do I prevent late blight?')">
+
+                How do I prevent late blight?
+
+            </button>
+
+
+            <button onclick="askQuestion(
+                'Best time of day to scan a leaf?')">
+
+                Best time to scan a leaf?
+
+            </button>
+
+        </div>
+
+
+        <div class="chat-input">
+
+            <input
+                id="questionInput"
+                type="text"
+                placeholder="Ask about your crop..."
+                onkeydown="handleEnter(event)"
+            >
+
+
+            <button class="voice">
+                🎙️
+            </button>
+
+
+            <button onclick="sendMessage()"
+                    class="send">
+
+                ➤
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PROFILE
+    ================================================== -->
+
+    <section id="profile"
+             class="page">
+
+        <div class="profile-card">
+
+            <div class="profile-avatar">
+
+                <i class="fa-regular fa-user"></i>
+
+            </div>
+
+            <div>
+
+                <strong>
+                    Anvi Raut
+                </strong>
+
+                <small>
+                    ☎ +91 98765 43210
+                </small>
+
+                <small>
+                    📍 Nashik, Maharashtra
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-card">
+
+            <h3>
+                🌐 Language
+            </h3>
+
+            <div class="language-buttons">
+
+                <button class="selected-language">
+                    English
+                </button>
+
+                <button>
+                    Marathi
+                </button>
+
+                <button>
+                    Hindi
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-card">
+
+            <h3>
+                🌱 Crop preferences
+            </h3>
+
+            <div class="crop-buttons">
+
+                <button class="crop selected">
+                    🍅 Tomato
+                </button>
+
+                <button class="crop selected">
+                    🥔 Potato
+                </button>
+
+                <button class="crop">
+                    🌾 Rice
+                </button>
+
+                <button class="crop">
+                    🌽 Maize
+                </button>
+
+                <button class="crop">
+                    🧵 Cotton
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-card settings-list">
+
+            <div>
+
+                <span>
+                    🔔 &nbsp; Notifications
+                </span>
+
+                <label class="switch">
+
+                    <input type="checkbox"
+                           checked>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    🔊 &nbsp; Voice assistance
+                </span>
+
+                <label class="switch">
+
+                    <input type="checkbox"
+                           checked>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    🌙 &nbsp; Dark mode
+                </span>
+
+                <label class="switch">
+
+                    <input type="checkbox"
+                           id="darkMode"
+                           onchange="toggleDarkMode()">
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-card simple-list">
+
+            <div>
+
+                🛡️ Privacy
+
+                <span>
+                    View
+                </span>
+
+            </div>
+
+
+            <div>
+
+                🌐 Help & Support
+
+                <span>
+                    View
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button onclick="logout()"
+                class="logout">
+
+            ⇥ &nbsp; Log out
+
+        </button>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         BOTTOM NAVIGATION
+    ================================================== -->
+
+    <nav id="bottomNav"
+         class="bottom-nav hidden">
+
+        <button onclick="showPage('home')"
+                id="nav-home"
+                class="active">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>
+                Home
+            </span>
+
+        </button>
+
+
+        <button onclick="showPage('scan')"
+                id="nav-scan">
+
+            <i class="fa-solid fa-expand"></i>
+
+            <span>
+                Scan
+            </span>
+
+        </button>
+
+
+        <button onclick="showPage('history')"
+                id="nav-history">
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            <span>
+                History
+            </span>
+
+        </button>
+
+
+        <button onclick="showPage('assistant')"
+                id="nav-assistant">
+
+            <i class="fa-regular fa-comment"></i>
+
+            <span>
+                Assistant
+            </span>
+
+        </button>
+
+
+        <button onclick="showPage('profile')"
+                id="nav-profile">
+
+            <i class="fa-regular fa-user"></i>
+
+            <span>
+                Profile
+            </span>
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- FILE INPUT -->
+
+    <input type="file"
+           id="imageInput"
+           accept="image/*"
+           hidden
+           onchange="handleImage(event)">
+
+
+    <!-- CAMERA INPUT -->
+
+    <input type="file"
+           id="cameraInput"
+           accept="image/*"
+           capture="environment"
+           hidden
+           onchange="handleImage(event)">
+
+
+
+    <!-- RESULT MODAL -->
+
+    <div id="resultModal"
+         class="modal hidden">
+
+        <div class="modal-box">
+
+            <button onclick="closeModal()"
+                    class="close">
+                ×
+            </button>
+
+            <div class="result-icon">
+                🌿
+            </div>
+
+            <h2 id="resultTitle">
+                Tomato Early Blight
+            </h2>
+
+            <p id="resultCrop">
+                Tomato
+            </p>
+
+            <div class="result-confidence">
+
+                <strong id="resultConfidence">
+                    94%
+                </strong>
+
+                confidence
+
+            </div>
+
+            <div id="resultStatus"
+                 class="result-status">
+
+                Diseased
+
+            </div>
+
+            <h3>
+                Recommended action
+            </h3>
+
+            <p>
+                Remove heavily affected leaves,
+                maintain proper spacing, avoid overhead
+                watering and monitor the crop regularly.
+            </p>
+
+            <button onclick="closeModal(); openAssistant()"
+                    class="analyze-btn">
+
+                Ask AI Assistant
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
